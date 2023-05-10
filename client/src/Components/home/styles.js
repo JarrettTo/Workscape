@@ -1,6 +1,6 @@
 import { FormHelperText } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-
+import opportunity from "./opportunities.jpg"
 export const useStyles = makeStyles((theme) => ({
     grid: { 
 
@@ -44,9 +44,9 @@ export const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         align: 'center',
         marginTop:'5vw',
-        paddingBottom:'11vw',
+        paddingBottom:'6vw',
         '@media (max-width:1750px)': {
-            marginTop: '8vw'
+            marginTop: '4vw'
         },
         '@media (max-width:1280px)': {
             marginTop: '24vw'
@@ -74,7 +74,7 @@ export const useStyles = makeStyles((theme) => ({
         stroke: 'black',
         strokeWidth:'100px',
         '-webkit-text-stroke': '3px',
-        fontSize:'11vw',
+        fontSize:'10vw',
         marginBottom:"0px" ,
         marginTop:"0px",
         lineHeight:'1',
@@ -102,7 +102,7 @@ export const useStyles = makeStyles((theme) => ({
         stroke: 'black',
         strokeWidth:'100px',
         '-webkit-text-stroke': '3px',
-        fontSize:'11vw',
+        fontSize:'10vw',
         marginBottom:"0px" ,
         marginTop:"0px",
         lineHeight:'1',
@@ -110,10 +110,10 @@ export const useStyles = makeStyles((theme) => ({
         justifyItems: 'center',
         textAlign: 'center',
         '@media (min-width:600px)': {
-            fontSize: '70px',
+            fontSize: '50px',
         },
         '@media (min-width:960px)': {
-            fontSize: '70px',
+            fontSize: '60px',
         },
         '@media (min-width:1281px)': {
             fontSize: '5vw',
@@ -219,6 +219,20 @@ export const useStyles = makeStyles((theme) => ({
             textAlign: 'center'
         },
     },
+    subtext2:{
+        fontFamily: 'proxima-nova, sans-serif',
+        display: 'inline-block',
+        fontWeight: 500,
+        fontSize:'20px',
+        marginTop:'40px',
+        color: '#2d5986',
+        '-webkit-text-stroke': '1.4px',
+        lineHeight:'1.2',
+        textAlign: 'center',
+        '@media (max-width:1280px)': {
+            textAlign: 'center'
+        },
+    },
     button:{
         fontFamily: 'proxima-nova, sans-serif',
         fontWeight: 400,
@@ -261,38 +275,77 @@ export const useStyles = makeStyles((theme) => ({
             width:'170px'
         },
     },
-   card:{
-      
+    card: {
         borderRadius: '20px',
         display: 'flex',
         flexDirection: 'column',
         boxShadow: '0 2px 4px rgba(0,0,0,0.4)',
-        backgroundColor: 'rgba(140, 179, 217, 0.2)',
+        backgroundColor: 'rgba(140, 179, 217, 0.1)',
         margin: '2vw',
-        width:'450px',
+        width:'380px',
         height: '390px',
-    
+        transform: 'translateY(0)',
+        transition: 'transform 0.4s ease-in-out',
         textAlign: 'left',
+        overflow: 'hidden',
+      
         '@media (min-width:970px)': {
-            width:'450px',
-            height: '390px'
+          width:'380px',
+          height: '390px'
         },
+        '&:hover' : {
+            transform: 'translateY(-15px)',
+            transition: 'transform 0.4s ease-in-out',
+        },
+        
+        '&:hover $imgCont': {
+          height: '0px',
+          transition: 'height 0.6s ease-in-out'
+        },
+        
+        '&:hover $cardText': {
+          marginTop: '-280px',
+          transition: 'margin-top 0.6s ease-in-out'
+        },
+        '&:hover $cardButton': {
+            marginTop: '-200px',
+            transition: 'margin-top 0.7s ease-in-out'
+        }
+      },
+   imgCont:{
+        width: "100%", 
+        height: "170px",
+    
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        borderTopLeftRadius: "20px",
+        borderTopRightRadius: "20px",
+        overflow: "hidden",
+        transition: 'height 0.6s ease-in-out'
+    
 
+   },
+   cardImg:{
+        maxWidth: "100%", 
+        objectFit: "cover",
+        borderRadius:"20px",
+        filter: 'grayscale(100%) '
    },
    cardText:{
         fontFamily: 'proxima-nova, sans-serif',
         fontWeight:500,
         wordWrap: 'break-word',
-        marginTop: '-260px',
+        marginTop: '0px',
         marginLeft:'38px',
         marginRight: '30px',
         overflowWrap: 'break-word',
-        maxWidth: '20vw',
-        fontSize: '20px',
+        maxWidth: '1000px',
+        fontSize: '18px',
         flex: 2   ,
         '@media (min-width:970px)': {
-            fontSize: '20px',
+            fontSize: '16px',
         },
+        transition: 'margin-top 0.6s ease-in-out',
     },
     cardHeader:{
         fontFamily: 'proxima-nova, sans-serif',
@@ -307,16 +360,51 @@ export const useStyles = makeStyles((theme) => ({
         stroke: 'black',
         strokeWidth:'100px',
         '-webkit-text-stroke': '1px',
-        fontSize: '25px',
+        fontSize: '23px',
         marginBottom:"0px" ,
-        marginTop:"30px",
+        marginTop:"0px",
         lineHeight:'1',
         textAlign: 'left',
         
         '@media (min-width:970px)': {
-            fontSize: '25px',
+            fontSize: '23px',
         },
-    }
-    
+    },
+    cardButton:{
+        fontFamily: 'proxima-nova, sans-serif',
+        fontWeight: 400,
+        blockSize: 1000,
+        padding: '16px 26px',
+        color: 'white',
+        background: '#0066cc',
+        fontSize:'14px',
+        alignContent: 'center',
+        borderRadius: 100,
+        marginBottom:'-80px',
+        marginLeft: '36px',
+        transition: 'margin-top 0.5s ease-in-out',
+        
+    },
+    sponsors:{
+        borderRadius: '20px',
+        display: 'flex',
+        flexDirection: 'column',
+        
+        backgroundColor: 'rgba(140, 179, 217, 0.15)',
+        marginBottom: "8vw",
+        width:'75%',
+        height: '9vw',
+        transform: 'translateY(0)',
+        transition: 'transform 0.4s ease-in-out',
+        textAlign: 'left',
+        
+    },
+    sponsor:{
+        maxWidth: "100%",
+        maxHeight: '100%', 
+        objectFit: "contain",
+        borderRadius:"20px",
+        filter: 'grayscale(100%) '
+   },
   // More style classes here
 }));

@@ -7,6 +7,7 @@ export const useStyles = makeStyles((theme) => ({
         display: 'inline-flex',
         position: 'fixed',
         overflow: 'hidden',
+        width: '1000px',
         'max-width': '100%',
         backgroundColor: "#fff",
         padding: '0 20px',

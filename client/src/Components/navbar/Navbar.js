@@ -8,12 +8,11 @@ const Navbar = () =>{
     const [activeSection, setActiveSection] = useState("p1");
     useEffect(() => {
         const handleScroll = () => {
-          const sections = document.querySelectorAll('section');
-          let currentSection= Array.from(sections)[Math.floor((window.scrollY+window.innerHeight/2)/window.innerHeight)]
-          const currentId = currentSection ? currentSection.getAttribute('id') : '';
+          const pages=["p1", "p2", "p3"]
+          setActiveSection(pages[Math.floor((window.scrollY+window.innerHeight/2)/window.innerHeight)])
             
-          window.history.replaceState(null, null, `#${currentId}`);
-          setActiveSection(currentId);
+            
+    
         
         };
         console.log(activeSection)
