@@ -61,6 +61,20 @@ export const useStyles = makeStyles((theme) => ({
         justify: 'center',
         justifyContent: 'center',
         align: 'center',
+       
+      
+        
+    },
+    page3:{
+
+        alignContent: 'center',
+        alignItems:'center',
+        justifyItems: 'center',
+        justify: 'center',
+        justifyContent: 'center',
+        align: 'center',
+        marginTop: '6vw'
+       
       
         
     },
@@ -224,13 +238,15 @@ export const useStyles = makeStyles((theme) => ({
         display: 'inline-block',
         fontWeight: 500,
         fontSize:'20px',
-        marginTop:'40px',
+        marginTop:'0px',
+        paddingBottom: '1vw',
         color: '#2d5986',
         '-webkit-text-stroke': '1.4px',
         lineHeight:'1.2',
         textAlign: 'center',
         '@media (max-width:1280px)': {
-            textAlign: 'center'
+            textAlign: 'center',
+            fontSize: '2vw'
         },
     },
     button:{
@@ -389,7 +405,8 @@ export const useStyles = makeStyles((theme) => ({
         borderRadius: '20px',
         display: 'flex',
         flexDirection: 'column',
-        
+        alignItems: 'center',
+        justifyContent: 'center',
         backgroundColor: 'rgba(140, 179, 217, 0.15)',
         marginBottom: "8vw",
         width:'75%',
@@ -399,12 +416,138 @@ export const useStyles = makeStyles((theme) => ({
         textAlign: 'left',
         
     },
-    sponsor:{
-        maxWidth: "100%",
-        maxHeight: '100%', 
-        objectFit: "contain",
-        borderRadius:"20px",
-        filter: 'grayscale(100%) '
-   },
+    
+   sponsor2:{
+    maxWidth: "80%",
+    maxHeight: '80%',
+    marginLeft: "3vw",
+    marginRight: "3vw",
+
+   
+
+},
+   sponsors:{
+    borderRadius: '20px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(140, 179, 217, 0.15)',
+    marginBottom: "8vw",
+    width:'75%',
+    height: '9vw',
+    transform: 'translateY(0)',
+    transition: 'transform 0.4s ease-in-out',
+    textAlign: 'left',
+    
+},
+sponsor:{
+    maxWidth: "40%",
+    maxHeight: '100%',
+    marginLeft: "20px",
+    marginRight: "20px",
+
+    borderRadius:"20px",
+
+},
+sponsorImages:{
+    padding: 0,
+    marginBottom: 0,
+    borderRadius: '0px',
+    height: '40%',
+    boxSizing:'borderBox',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+
+  },
+  headerText:{
+    fontFamily: 'proxima-nova, sans-serif',
+    fontWeight:500,
+    display: 'inline-block',
+    color: '#132639',
+    outlineWidth:'10px',
+    stroke: 'black',
+    strokeWidth:'100px',
+    '-webkit-text-stroke': '3px',
+    fontSize:'40px',
+    marginBottom:"30px" ,
+    marginTop:"0px",
+    
+    marginRight:'0',
+    lineHeight:'1',
+    align:'center',
+    justifyItems: 'center',
+    textAlign: 'center',
+    '@media (min-width:600px)': {
+        fontSize: '40px',
+    },
+    '@media (min-width:960px)': {
+        fontSize: '40px',
+    },
+    '@media (min-width:961px)': {
+        fontSize: '40px',
+        textAlign:'right',
+        marginRight:'8vw',
+    },
+    '@media (min-width:1281px)': {
+        fontSize: '3vw',
+    },
+    
+    
+},
+textCont3:{
+    display: 'flex',
+    alignItems: 'left',
+    justifyContent: 'center',
+    padding: 0,
+  
+    flexDirection: 'column',
+    '@media (max-width:960px)': {
+        alignItems: 'center'
+    },
+    
+},
+whyCont:{
+    margin: 0,
+    padding: 0,
+},
+contextText:{
+    marginLeft: "16vw",
+    marginRight: "8vw",
+    color: '#132639',
+    fontFamily: 'proxima-nova, sans-serif',
+    fontWeight:500,
+    textAlign: 'justify',
+    '@media (min-width:600px)': {
+        fontSize: '30px',
+        
+    },
+    '@media (min-width:960px)': {
+        fontSize: '25px',
+    },
+    '@media (min-width:1281px)': {
+        fontSize: '25px',
+        
+    },
+    '@media (max-width:1280px)': {
+        textAlign: 'justify'
+    },
+},
+
+pig:{
+ 
+    width: '33vw',
+    height: 'auto',
+
+ 
+    padding: 0,
+    marginLeft: '1.8vw',
+
+
+}
+
+
+
   // More style classes here
 }));

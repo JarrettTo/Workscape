@@ -11,6 +11,10 @@ import opportunity from './opportunities.jpg';
 import talent from './talent.jpg';
 import safety from './safety.jpg';
 import airbnb from './Airbnb.png';
+import spotify from './spotify.png';
+import formula1 from './formula1.png';
+import waze from './waze.png';
+import pig from './Piggy Bank.png';
 const Home = () =>{
     useEffect(() => {
 
@@ -43,8 +47,13 @@ const Home = () =>{
             </Grid>
             <Grid item container className={classes.page2} xs = {12}>
                 <div className={classes.sponsors}>
-                    <Typography className={classes.subtext2} textAlign="center">As used by</Typography>
-                    <img src={airbnb} className={classes.sponsor}/>
+                    <Typography className={classes.subtext2} textAlign="center">As trusted by</Typography>
+                    <div className={classes.sponsorImages}>
+                        <img src={airbnb} className={classes.sponsor2}/> 
+                        <img src={spotify} className={classes.sponsor2}/>
+                        <img src={formula1} className={classes.sponsor2}/>
+                        <img src={waze} className={classes.sponsor2}/>
+                    </div>
                 </div>
             </Grid>
             <Grid item container className={classes.page2} xs={12}>
@@ -94,6 +103,23 @@ const Home = () =>{
                             <Button variant='contained' className={classes.cardButton}>Learn More</Button>
                         </div>
                     </div>
+                </Grid>
+                
+            </Grid>
+            <Grid item container className={classes.page3} xs={12}>
+                <Grid item xs={12} className={classes.textCont2} >
+                    <Typography className={classes.mainText2} textAlign="center">Why choose<br/><div className={classes.highlightedText2}>Workscape?</div></Typography>
+                </Grid>
+                <Grid item container className={classes.whyCont} xs={12}>
+                    <Grid item xs={12} sm={12} md={6} className={classes.textCont3} >
+                        <Typography className={classes.headerText} textAlign="center">Reduced <div className={classes.highlightedText2}>Royalties</div></Typography>
+                        <Typography className={classes.contextText} textAlign="center">Thanks to our ad program, Workscape can afford to incorporate a smaller royalty percentage, which means more earnings for freelancers!</Typography>
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={6} className={classes.textCont3} >
+                        <img src={pig} className={classes.pig}></img>
+                    </Grid>
+
+
                 </Grid>
             </Grid>
        
